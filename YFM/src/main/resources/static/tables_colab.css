@@ -1,0 +1,30 @@
+header { 
+    padding: 20px;
+    color: rgb(161, 156, 154);
+    background-color: orange;
+    text-align: center;
+}
+
+main {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+main > section {
+
+    text-align: center;
+    background-color: rgb(134, 131, 131);
+    color:rgb(29, 28, 26);
+    padding: 5px;
+    margin: 10px;
+    width: 30%;
+    min-width: 200px;
+    border-radius: 5cm;
+    border-color: aqua;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration:wavy;
+
+}

@@ -10,6 +10,7 @@
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="login.js"></script>
+    <link rel="stylesheet" href="tables_colab.css">
    
 
 </head>
@@ -39,18 +40,14 @@
     </style>
     <h4 id="welcome" style="text-align: center">Bem Vindo </h4>
     <h3 style="text-align: center;">Todos os Colaboradores</h3>
-    <script>
-        function getnome_colaborador() {
-          var nome = document.getElementById("colab").value;
-          document.getElementById("welcome").innerHTML = nome;
-        }
+    <main id="colaboradores"></main>
     </script> 
 
     <button id="button_Login" class="round_button" style="margin-left: 40%;"  >Iniciar sessão</button>
 
     <script style="left: auto;" type="text/javascript">
             document.getElementById("button_Login").onclick = function () {
-                location.href = "index.html";
+                location.href = "/index.html";
             };
         </script>
 </body>

@@ -1,12 +1,12 @@
 window.onload = async function() {
     try {
-        let colab = await $.ajax({ 
+        let colaboradores = await $.ajax({ 
             url: "/api/colaboradores",
             method: "get",
             dataType: "json"
         });
         let html = "";
-        for (let colab of colab) {
+        for (let colab of colaboradores) {
             html+=`<section>
                     <h2>${colab.name}</h>
                     <p>${colab.mail}</p>
