@@ -1,0 +1,25 @@
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius:100px;
+  }
+label {
+    display: inline-block   ;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+  }
+button{
+    /*Change the width as much as you like, but make sure 
+    margin-left and margin-right + width = 100%*/
+    width: auto;
+    margin: left 50px;
+    margin: right 50px;
+}
+button {
+    margin:0 auto;
+    display:block;
+}

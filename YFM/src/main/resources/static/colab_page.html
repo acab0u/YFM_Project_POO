@@ -37,17 +37,22 @@
             
                 .round_button:hover {opacity: 1}
     </style>
-    <h4 style="text-align: center">Introduza o nome de utilizador: <input id="nome_colab" type="text"></h4>
-    <h4 style="text-align: center;margin-top: -5px;">Introduza a palavra-passe: <input id="pass_colab" type="password"></h4>
+    <h4 id="welcome" style="text-align: center">Bem Vindo </h4>
+    <h3 style="text-align: center;">Todos os Colaboradores</h3>
+    <script>
+        function getnome_colaborador() {
+          var nome = document.getElementById("colab").value;
+          document.getElementById("welcome").innerHTML = nome;
+        }
+    </script> 
+
     <button id="button_Login" class="round_button" style="margin-left: 40%;"  >Iniciar sessão</button>
 
     <script style="left: auto;" type="text/javascript">
             document.getElementById("button_Login").onclick = function () {
-                return location.href = "Colab_page.html";
+                location.href = "index.html";
             };
         </script>
-        <H4 style="text-align: center;">Your Fleet Management tem como objetivo atenuar as dificuldades das empresas que possuem viaturas, no que diz respeito á gestão das mesmas.</H4>
-        <H4 style="text-align: center;">Neste tempo de rápida evolução, maximizar o tempo e lucro das suas viaturas será o verdadeiro objetivo a superar!</h4>
 </body>
 
 </html>
