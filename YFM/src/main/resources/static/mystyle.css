@@ -3,7 +3,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     width: 40%;
-    border-radius:100px;
+    border-radius:100%;
   }
 label {
     display: inline-block   ;

@@ -10,23 +10,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="colaborador")
-public class Colab {
+public class Colab_name {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)  
     @Column(name="id_colaborador")
     private int id;
     @Column(name="nome_colaborador")
     private String name;
-    @Column(name="e_mail")
-    private String mail;
-    public Colab() {}
+    public Colab_name() {}
     public int getId() {
         return id;
     }
     public String getName() {
         return name;
-    }
-    public String getMail() {
-        return mail;
     }
 }

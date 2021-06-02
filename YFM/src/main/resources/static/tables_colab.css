@@ -1,6 +1,6 @@
 header { 
     padding: 20px;
-    color: rgb(161, 156, 154);
+    color: rgb(122, 119, 118);
     background-color: orange;
     text-align: center;
 }
@@ -13,18 +13,19 @@ main {
 }
 
 main > section {
-
-    text-align: center;
-    background-color: rgb(134, 131, 131);
-    color:rgb(29, 28, 26);
-    padding: 5px;
-    margin: 10px;
-    width: 30%;
-    min-width: 200px;
-    border-radius: 5cm;
-    border-color: aqua;
-    cursor: pointer;
-    display: inline-block;
-    text-decoration:wavy;
+                width: auto;
+                position:relative;
+                background-color: #707279;
+                border:none;
+                color: white;
+                padding: 32px 64px;
+                font-size: 22px;
+                margin:2px;
+                opacity: 0.6;
+                transition: 0.3s;
+                display: flex;
+                text-decoration:wavy;
+                cursor: pointer;
+                border-radius: 50%;
 
 }

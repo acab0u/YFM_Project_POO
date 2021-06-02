@@ -5,48 +5,50 @@
     
 <head >
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="mystyle.css">
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="login.js"></script>
-   
+    <script src="colab_data.js"></script>
+    <script src="colab_name.js"></script>
+    <link rel="stylesheet" href="tables_colab.css">
+    <link rel="stylesheet" href="mystyle.css">
 
 </head>
 
-<body style="background-color: darkgrey;">
+<body style="background-color: rgb(172, 172, 165);">
     <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
     <h2 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h2>
-    <style>
-            .round_button {
-                position:relative;
-                background-color: #707279;
-                border:none;
-                color: white;
-                padding: 32px 64px;
-                font-size: 22px;
-                margin:2px;
-                opacity: 0.7;
-                transition: 0.3s;
-                display: inline-block;
-                text-decoration:wavy;
-                cursor: pointer;
-                border-radius: 50%;
-                }
-            
-                .round_button:hover {opacity: 1}
-    </style>
-    <h4 style="text-align: center">Introduza o nome de utilizador: <input id="text_nome_colab" type="text"></h4>
-    <h4 style="text-align: center;margin-top: -5px;">Introduza a palavra-passe: <input id="text_pass_colab" type="password"></h4>
-    <button id="button_Login" class="round_button" style="margin-left: 40%;"  >Iniciar sessão</button>
 
-    <script style="left: auto;" type="text/javascript">
-            document.getElementById("button_Login").onclick = function () {
-                return location.href = "Colab_page.html";
+    <style>
+        .round_button {
+            position:static;
+            background-color: #707279;
+            border:none;
+            color: rgb(7, 7, 7);
+            padding: 64px;
+            font-size: 22px;
+            margin:2px;
+            opacity: 0.7;
+            transition: 0.3s;
+            display:flow-root;
+            text-decoration:wavy;
+            cursor: pointer;
+            border-radius: 100%;
+            }
+        
+            .round_button:hover {opacity: 1}
+        </style>
+    <h3 style="text-align: center;">Escolha o utilizador para efetuar login </h3>
+    <main id="colaboradores"> <section id="showInfo_Colab"></section></main>   
+    <script id="colaboradores"  ></script>
+    
+    <button id="button_Home" class="round_button" style="margin-left: 40%;"  >Iniciar sessão</button>
+
+    <script style="text-align:center;" type="text/javascript">
+            document.getElementById("button_Home").onclick = function () {
+                location.href = "colab_info.html";
             };
-        </script>
-        <H4 style="text-align: center;">Your Fleet Management tem como objetivo atenuar as dificuldades das empresas que possuem viaturas, no que diz respeito á gestão das mesmas.</H4>
-        <H4 style="text-align: center;">Neste tempo de rápida evolução, maximizar o tempo e lucro das suas viaturas será o verdadeiro objetivo a superar!</h4>
+    </script>
 </body>
 
 </html>
