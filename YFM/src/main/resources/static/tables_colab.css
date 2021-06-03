@@ -27,5 +27,5 @@ main > section {
                 text-decoration:wavy;
                 cursor: pointer;
                 border-radius: 50%;
-
+                opacity: 1;
 }

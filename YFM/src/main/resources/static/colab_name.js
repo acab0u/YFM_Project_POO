@@ -1,20 +1,19 @@
 window.onload = async function() {
-    let colabtId = sessionStorage.getItem("colabId");
-    await showColabInfo(colabId);
+    let colab = sessionStorage.getItem("colabId");
+    await showColab(colab);
 }
 
-async function showColabInfo(id) {
+
+async function showColab(id) {
     try {
         let colab = await $.ajax({ 
             url: `/api/colaboradores/${id}`,
             method: "get",
             dataType: "json"
         });
-        document.getElementById("ColabName").innerHTML = colab.name;
-        document.getElementById("e_mail").innerHTML = colab.mail;
-        document.getElementById("contacto").innerHTML = colab.contacto;
-        document.getElementById("morada").innerHTML = colab.morada;
-        document.getElementById("localidade").innerHTML = colab.localidade;
+        document.getElementById("colabname").innerHTML = colab.name;
+        document.getElementById("name").innerHTML = colab.name;
+        document.getElementById("contacto").innerHTML = colab.contact;
     } catch(err) {
         console.log(err);
     }

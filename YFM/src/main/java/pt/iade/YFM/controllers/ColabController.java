@@ -28,7 +28,7 @@ public class ColabController {
 
     @GetMapping(path = "/{colabId:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
     public Colab getColabname(@PathVariable("colabId") int colabId) {
-    logger.info("Sending employee with id "+colabId);
+    logger.info("Sending employee with id "+ colabId);
     Optional<Colab> _colab = ColabRepository.findById(colabId);
     if (!_colab.isPresent()) {
       try {

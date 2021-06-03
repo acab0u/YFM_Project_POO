@@ -1,23 +1,25 @@
 
 <!DOCTYPE html>
 <html lang="en">
-
-    
+ 
 <head >
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="UTF-8">  
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="img_style.css">
     <script src="colab_name.js"></script>
-    <link rel="stylesheet" href="tables_colab.css">
-    <link rel="stylesheet" href="mystyle.css">
-
 </head>
 
 <body style="background-color: darkgrey;">
-    <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
-    <h2 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h2>
+    <header><img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo"></header>
+    <h1>Colaborador: <span id="colabname" ></span></h1>
+    <main>
+        <section>
+            <h3> Name: <span id="name"></span> </h3>
+            <h4> Credits: <span id="colabname"></span> </h4>
+            <h4 id="contacto"> Credits: <span id="colabname"></span> </h4>
+        </section>
     <style>
             .round_button {
                 position:static;
@@ -38,16 +40,7 @@
                 .round_button:hover {opacity: 1}
     </style>
     
-
-    <main id="colaboradores" onclick="showInfo(colaboradores)"><section class="round_button" ></section></main>
-
-
-
-    <script style="left: auto;" type="text/javascript">
-            document.getElementById("button_Home").onclick = function () {
-                return location.href = "index.html";
-            };
-        </script>
+    
         <button id="button_Home" class="round_button" style="margin-left: 40%;"  >Página anterior</button>
         <script>
             document.getElementById("button_Home").onclick = function () {
