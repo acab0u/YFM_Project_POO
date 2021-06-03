@@ -20,31 +20,30 @@
 
     <style>
         .round_button {
-            position:static;
             background-color: #707279;
             border:none;
             color: rgb(7, 7, 7);
             padding: 64px;
             font-size: 22px;
-            margin:2px;
             opacity: 0.7;
             transition: 0.3s;
             display:flow-root;
             text-decoration:wavy;
             cursor: pointer;
             border-radius: 100%;
+            }        
+            .round_button:hover {
+                opacity: 1
             }
-        
-            .round_button:hover {opacity: 1}
-        </style>
+    </style>
     <h3 style="text-align: center;">Escolha o utilizador para efetuar login </h3>
-    <main id="colaboradores">   
+    <main class="round_button2" id="colaboradores">
     </main>   
     
-    <button style="animation:forwards;" center;" id="button_Home" class="round_button" >Voltar para página inicial</button>
+    <button style="padding: 50px; position: relative;" id="button_home" class="round_button" >Voltar para página inicial</button>
 
     <script style="text-align:center;" type="text/javascript">
-            document.getElementById("button_Home").onclick = function () {
+            document.getElementById("button_home").onclick = function () {
                 location.href = "index.html";
             };
     </script>

@@ -10,22 +10,38 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width: auto;
+    position:relative;
+    border:1cm;
+    color: white;
+    padding: 32px 64px;
+    font-size: 22px;
+    opacity: 0.1.;
+    transition: 0.3s;
+    display: flex;
+    text-decoration:wavy;
+    cursor:auto;
+    border-radius: 50%;
+    opacity: 1;
 }
 
 main > section {
-                width: auto;
-                position:relative;
-                background-color: #707279;
-                border:none;
-                color: white;
-                padding: 32px 64px;
-                font-size: 22px;
-                margin:2px;
-                opacity: 0.6;
-                transition: 0.3s;
-                display: flex;
-                text-decoration:wavy;
-                cursor: pointer;
-                border-radius: 50%;
-                opacity: 1;
+    padding: 10px;
+    display: flow-root;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+    position:relative;
+    background-color: #707279;
+    border:none;
+    color: white;
+    padding: 32px 64px;
+    font-size: 22px;
+    opacity: 0.3;
+    transition: 0.3s;
+    display:flow-root;
+    text-decoration:wavy;
+    cursor: pointer;
+    border-radius: 100%;
+    opacity: 1
 }
