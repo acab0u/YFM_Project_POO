@@ -1,37 +1,21 @@
 window.onload = async function() {
+    let colabtId = sessionStorage.getItem("colabId");
+    await showColabInfo(colabId);
+}
+
+async function showColabInfo(id) {
     try {
-        let colaboradores = await $.ajax({ 
-            url: "/api/colaboradores",
+        let colab = await $.ajax({ 
+            url: `/api/colaboradores/${id}`,
             method: "get",
             dataType: "json"
         });
-        let html = "";
-        for (let colab of colaboradores) {
-            html+=`<section>
-                    <h4>${colab.name}</h>
-                    <p>${colab.mail}</p>
-                    </section>`
-        }
-        document.getElementById("colaboradores").innerHTML = html;
+        document.getElementById("ColabName").innerHTML = colab.name;
+        document.getElementById("e_mail").innerHTML = colab.mail;
+        document.getElementById("contacto").innerHTML = colab.contacto;
+        document.getElementById("morada").innerHTML = colab.morada;
+        document.getElementById("localidade").innerHTML = colab.localidade;
     } catch(err) {
         console.log(err);
     }
-
-async function showInfo_colab() {
-    try {
-        let name = document.getElementById("colaboradores").value;
-        let colaboradores = await $.ajax({
-            url: "/api/colaboradores/"+name,
-            method: "get",
-            dataType: "json"
-        }
-        );
-        showInfo(colaboradores);
-            
-    } catch(err) {
-        let elemMain = document.getElementById("colaboradores");
-        console.log(err);
-        elemMain.innerHTML = "<h1> Página não está disponível</h1>"+
-                "<h2> Por favor tente mais tarde</h2>";}
-    }
-} 
+}

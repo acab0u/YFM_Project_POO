@@ -19,6 +19,12 @@ public class Colab {
     private String name;
     @Column(name="e_mail")
     private String mail;
+    @Column(name="contacto")
+    private String contact;
+    @Column(name="morada")
+    private String address;
+    @Column(name="localidade")
+    private String local;
     public Colab() {}
     public int getId() {
         return id;
@@ -28,5 +34,14 @@ public class Colab {
     }
     public String getMail() {
         return mail;
+    }
+    public String getContact() {
+        return contact;
+    }
+    public String getAddress() {
+        return address;
+    }
+    public String getLocal() {
+        return local;
     }
 }

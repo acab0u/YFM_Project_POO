@@ -8,47 +8,42 @@
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="colab_data.js"></script>
-    <script src="colab_name.js"></script>
     <link rel="stylesheet" href="tables_colab.css">
     <link rel="stylesheet" href="mystyle.css">
 
 </head>
 
 <body style="background-color: rgb(172, 172, 165);">
-    <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
-    <h2 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h2>
-
     <style>
         .round_button {
             position:static;
             background-color: #707279;
             border:none;
-            color: rgb(7, 7, 7);
+            color: white;
             padding: 64px;
             font-size: 22px;
             margin:2px;
             opacity: 0.7;
             transition: 0.3s;
-            display:flow-root;
+            display:list-item;
             text-decoration:wavy;
             cursor: pointer;
-            border-radius: 100%;
+            border-radius: 50%;
             }
         
             .round_button:hover {opacity: 1}
-        </style>
-    <h3 style="text-align: center;">Escolha o utilizador para efetuar login </h3>
-    <main id="colaboradores"> <section id="showInfo_Colab"></section></main>   
-    <script id="colaboradores"  ></script>
-    
-    <button id="button_Home" class="round_button" style="margin-left: 40%;"  >Iniciar sessão</button>
-
-    <script style="text-align:center;" type="text/javascript">
-            document.getElementById("button_Home").onclick = function () {
-                location.href = "colab_info.html";
-            };
+</style>
+    <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
+    <h1 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h1>
+    <button id="button_lista_colab" class="round_button" style="margin-left: 40%;"  >Página anterior</button>
+    <script>
+        document.getElementById("button_lista_colab").onclick = function () {
+        return location.href = "lista_colabs.html";
+    };
     </script>
+    
+    
 </body>
 
+        
 </html>

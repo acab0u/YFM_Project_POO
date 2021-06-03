@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    
+<head >
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
+    <title>YFM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="colab_data.js"></script>
+    <script src="colab_name.js"></script>
+    <link rel="stylesheet" href="tables_colab.css">
+    <link rel="stylesheet" href="mystyle.css">
+
+</head>
+
+<body style="background-color: rgb(172, 172, 165);">
+    <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
+    <h2 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h2>
+
+    <style>
+        .round_button {
+            position:static;
+            background-color: #707279;
+            border:none;
+            color: rgb(7, 7, 7);
+            padding: 64px;
+            font-size: 22px;
+            margin:2px;
+            opacity: 0.7;
+            transition: 0.3s;
+            display:flow-root;
+            text-decoration:wavy;
+            cursor: pointer;
+            border-radius: 100%;
+            }
+        
+            .round_button:hover {opacity: 1}
+        </style>
+    <h3 style="text-align: center;">Escolha o utilizador para efetuar login </h3>
+    <main id="colaboradores">
+        <section onclick="showInfo(1)"></section>
+        <section onclick="showInfo(2)"></section>
+        <section onclick="showInfo(3)"></section>
+        <section onclick="showInfo(4)"></section>
+        <section onclick="showInfo(5)"></section>
+        <section onclick="showInfo(6)"></section>
+        <section onclick="showInfo(7)"></section>
+        <section onclick="showInfo(8)"></section>
+        <section onclick="showInfo(9)"></section>
+        <section onclick="showInfo(10)"></section>
+        <section onclick="showInfo(11)"></section>
+        <section onclick="showInfo(12)"></section>
+        <section onclick="showInfo(13)"></section>
+        <section onclick="showInfo(14)"></section>
+        <section onclick="showInfo(15)"></section>
+        <section onclick="showInfo(65)"></section>
+        <section onclick="showInfo(17)"></section>
+        <section onclick="showInfo(18)"></section>
+        <section onclick="showInfo(19)"></section>
+        <section onclick="showInfo(20)"></section>        
+    </main>   
+    
+    <button style="animation:forwards;" center;" id="button_Home" class="round_button" >Voltar para página inicial</button>
+
+    <script style="text-align:center;" type="text/javascript">
+            document.getElementById("button_Home").onclick = function () {
+                location.href = "index.html";
+            };
+    </script>
+</body>
+
+</html>
