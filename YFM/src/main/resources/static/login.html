@@ -9,7 +9,7 @@
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="img_style.css">
-
+    <script src="colab_name.js"></script>
 </head>
 
 <body style="background-color: rgb(172, 172, 165);">
@@ -32,21 +32,16 @@
         
             .round_button:hover {opacity: 1}
 </style>
-
+<header>
     <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
-    <h1 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h1>
-    <button id="button_lista_colab" class="round_button" style="margin-left: 40%;"  >Página anterior</button>
-    <script>
-        document.getElementById("button_lista_colab").onclick = function () {
-        return location.href = "lista_colabs.html";
-    };
-    </script>
-    <button id="button_login" class="round_button">Iniciar sessão</button>
-    <script>
-        document.getElementById("button_login").onclick = function(){
-            return location.href ="login.html";
-        }
-    </script>
+</header>
+    <h1 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Por favor, efetue o login </h1>
+
+    <main>
+        <h3 style="text-align: center;"> Nome de Utilizador: <input type="text" id="colab_username"> </h3>
+        <h3 style="text-align: center;"> palavra-passe: <input type="text" id="colab_password"></h3>
+        <button id="button_login" class="round_button" type="button" style="margin-left: 40%;">Iniciar Sessão</button>
+    </main>
     
 </body>
 

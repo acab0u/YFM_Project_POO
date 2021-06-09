@@ -9,54 +9,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="colaborador")
-public class Colab {
+@Table(name="empresa")
+public class Empresa {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)  
-    @Column(name="id_colaborador")
-    private int id;
     @Column(name="id_empresa")
-    private int empresaId;
-    @Column(name="nome_colaborador")
+    private int id;
+    @Column(name="nome_empresa")
     private String name;
     @Column(name="e_mail")
     private String mail;
     @Column(name="contacto")
-    private String contact;
+    private int contact;
     @Column(name="morada")
     private String address;
-    @Column(name="localidade")
-    private String local;
-    @Column(name="username")
-    private String username;
-    @Column(name="password")
-    private String password;
-    public Colab() {}
+    @Column(name="nif")
+    private int nif;
+    public Empresa() {}
     public int getId() {
         return id;
     }
-    public int getEmpresaId() {
-        return empresaId;
-    }
-    public String getName() {
+    public  String getName() {
         return name;
     }
     public String getMail() {
         return mail;
     }
-    public String getContact() {
+    public int getContact() {
         return contact;
     }
     public String getAddress() {
         return address;
     }
-    public String getLocal() {
-        return local;
-    }
-    public String getUsername() {
-        return username;
-    }
-    public String getPassword() {
-        return password;
+    public int getNif() {
+        return nif;
     }
 }

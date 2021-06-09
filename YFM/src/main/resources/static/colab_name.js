@@ -11,9 +11,14 @@ async function showColab(id) {
             method: "get",
             dataType: "json"
         });
-        document.getElementById("colabname").innerHTML = colab.name;
-        document.getElementById("name").innerHTML = colab.name;
+        document.getElementById("id").innerHTML = colab.id;
+        document.getElementById("colab_nome").innerHTML = colab.name;
+        document.getElementById("nome").innerHTML = colab.name;
         document.getElementById("contacto").innerHTML = colab.contact;
+        document.getElementById("e-mail").innerHTML = colab.mail;
+        document.getElementById("colab_morada").innerHTML = colab.address;
+        document.getElementById("localidade").innerHTML = colab.local;
+        
     } catch(err) {
         console.log(err);
     }
