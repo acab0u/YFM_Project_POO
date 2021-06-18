@@ -37,4 +37,10 @@ public class EmpController {
     }
     return _emp.get();
   }
+    
+    @GetMapping(path = "/colaborador/{colabId}", produces= MediaType.APPLICATION_JSON_VALUE)
+      public Empresa getCompanyByColabId(@PathVariable("colabId") Integer colabId) {
+        logger.info("Sending company of employee with id "+ colabId );
+        return EmpRepository.FindCompanyId(colabId);
+    }     
 }

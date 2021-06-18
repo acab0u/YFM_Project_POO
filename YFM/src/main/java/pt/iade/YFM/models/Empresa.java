@@ -23,6 +23,8 @@ public class Empresa {
     private int contact;
     @Column(name="morada")
     private String address;
+    @Column(name="localidade")
+    private String local;
     @Column(name="nif")
     private int nif;
     public Empresa() {}
@@ -40,6 +42,9 @@ public class Empresa {
     }
     public String getAddress() {
         return address;
+    }
+    public String getLocal() {
+        return local;
     }
     public int getNif() {
         return nif;

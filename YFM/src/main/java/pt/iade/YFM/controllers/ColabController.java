@@ -28,25 +28,25 @@ public class ColabController {
 
     @GetMapping(path = "/{colabId:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
     public Colab getColabname(@PathVariable("colabId") int colabId) {
-    logger.info("Sending employee with id "+colabId);
-    Optional<Colab> _colab = ColabRepository.findById(colabId);
-    if (!_colab.isPresent()) {
-      try {
+      logger.info("Sending employee with id "+colabId);
+      Optional<Colab> _colab = ColabRepository.findById(colabId);
+      if (!_colab.isPresent()) {
+        try {
         throw new NotFoundException(""+colabId+"Colaborador" + "id");
-    } catch (NotFoundException e){}
+      } catch (NotFoundException e){}
     }
-    return _colab.get();
-  }
+      return _colab.get();
+    }
     @GetMapping(path = "/empresa/{empresaId}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Iterable<Colab> getColabByEmpresa(@PathVariable("empresaId") Integer empresaId) {
       logger.info("Sending employees with company id "+ empresaId);
       return ColabRepository.findByEmpresaId(empresaId);
     }  
 
-    @GetMapping(path = "/Username/{colab_username}/{colab_password}", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/login/{colab_username}/{colab_password}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Iterable<Colab> getColabByUsernameAndPassword(@PathVariable("colab_username") String username,@PathVariable("colab_password") String password) {
-      logger.info("Sending employee with username "+ username + " and password " + password);
-      return ColabRepository.FindColabByUsernameAndPassword(username, password);
-    }      
+        logger.info("Sending employee with username "+ username + " and password " + password);
+        return ColabRepository.FindColabByUsernameAndPassword(username, password);
+      }        
 
 }
