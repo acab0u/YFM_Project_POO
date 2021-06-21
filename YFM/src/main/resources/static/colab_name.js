@@ -22,4 +22,31 @@ async function showColab(id) {
     } catch(err) {
         console.log(err);
     }
+    
+}
+window.onload = async function() {
+    let colab = sessionStorage.getItem("colabId");
+    await showColab(colab);
+}
+
+
+async function showEmpresa(id) {
+    try {
+        let empresa = await $.ajax({ 
+            url: `/api/empresas/colaborador/${id}`,
+            method: "get",
+            dataType: "json"
+        });
+        document.getElementById("id").innerHTML = empresa.id;
+        document.getElementById("colab_nome").innerHTML = empresa.name;
+        document.getElementById("nome").innerHTML = empresa.name;
+        document.getElementById("contacto").innerHTML = empresa.contact;
+        document.getElementById("e-mail").innerHTML = empresa.mail;
+        document.getElementById("colab_morada").innerHTML = empresa.address;
+        document.getElementById("localidade").innerHTML = empresa.local;
+        
+    } catch(err) {
+        console.log(err);
+    }
+    
 }

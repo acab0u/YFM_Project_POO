@@ -36,7 +36,7 @@ public class EmpController {
     } catch (NotFoundException e){}
     }
     return _emp.get();
-  }
+    }
     
     @GetMapping(path = "/colaborador/{colabId}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Empresa getCompanyByColabId(@PathVariable("colabId") Integer colabId) {
