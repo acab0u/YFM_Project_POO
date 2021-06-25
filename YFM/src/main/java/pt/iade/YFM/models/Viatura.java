@@ -1,5 +1,5 @@
 package pt.iade.YFM.models;
-
+import javax.persistence.Id;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="viaturas")
 public class Viatura {
+    @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)  
     @Column(name="id_viatura")
     private int id;
@@ -28,6 +29,7 @@ public class Viatura {
     private String data_apolice;
     @Column(name="quilometros_viatura")
     private int quilometros;
+
     public int getId() {
         return id;
     }

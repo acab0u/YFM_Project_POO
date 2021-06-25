@@ -1,8 +1,8 @@
 window.onload = async function() {
     let colab = sessionStorage.getItem("colabId");
     await showColab(colab);
+    await showEmpresa(colab);
 }
-
 
 async function showColab(id) {
     try {
@@ -22,14 +22,8 @@ async function showColab(id) {
     } catch(err) {
         console.log(err);
     }
-    
-}
-window.onload = async function() {
-    let colab = sessionStorage.getItem("colabId");
-    await showColab(colab);
-}
 
-
+}
 async function showEmpresa(id) {
     try {
         let empresa = await $.ajax({ 
@@ -37,16 +31,15 @@ async function showEmpresa(id) {
             method: "get",
             dataType: "json"
         });
-        document.getElementById("id").innerHTML = empresa.id;
-        document.getElementById("colab_nome").innerHTML = empresa.name;
-        document.getElementById("nome").innerHTML = empresa.name;
-        document.getElementById("contacto").innerHTML = empresa.contact;
-        document.getElementById("e-mail").innerHTML = empresa.mail;
-        document.getElementById("colab_morada").innerHTML = empresa.address;
-        document.getElementById("localidade").innerHTML = empresa.local;
+        document.getElementById("emp_id").innerHTML = empresa.id;
+        document.getElementById("emp_nome").innerHTML = empresa.name;
+        document.getElementById("emp_contacto").innerHTML = empresa.contact;
+        document.getElementById("emp_e-mail").innerHTML = empresa.mail;
+        document.getElementById("emp_morada").innerHTML = empresa.address;
+        document.getElementById("emp_localidade").innerHTML = empresa.local;
         
     } catch(err) {
         console.log(err);
     }
-    
 }
+

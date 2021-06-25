@@ -8,8 +8,7 @@ import pt.iade.YFM.models.Colab;
 import pt.iade.YFM.models.Empresa;
 
 public interface ColabRepository extends CrudRepository<Colab, Integer> {
-    Iterable<Colab> findByNameContaining(String text);
-    Iterable<Empresa> findByName(String text);
+    Iterable<Empresa> findById(String text);
     String QueryFindColabByUsernameAndPassword = 
                 "SELECT * FROM colaborador WHERE colaborador.username=:colab_username and colaborador.password=:colab_password";
     @Query(value=QueryFindColabByUsernameAndPassword,nativeQuery=true)

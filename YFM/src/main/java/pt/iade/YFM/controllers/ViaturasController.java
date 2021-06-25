@@ -27,14 +27,15 @@ public class ViaturasController {
         return ViaturaRepository.findAll();
     }
     @GetMapping(path = "/{viaturaId:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
-    public Viatura getEmpname(@PathVariable("viaturaId") int viaturaId) {
+    public Viatura getViaturaName(@PathVariable("viaturaId") int viaturaId) {
     logger.info("Sending company with id "+viaturaId);
     Optional<Viatura> _viatura = ViaturaRepository.findById(viaturaId);
     if (!_viatura.isPresent()) {
       try {
-        throw new NotFoundException(""+viaturaId+"Viatura" + "id");
+        throw new NotFoundException(""+viaturaId+" Viatura" + "id");
     } catch (NotFoundException e){}
     }
     return _viatura.get();
     }
+     
 }

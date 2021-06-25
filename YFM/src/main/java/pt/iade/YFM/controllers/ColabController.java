@@ -30,10 +30,10 @@ public class ColabController {
     public Colab getColabname(@PathVariable("colabId") int colabId) {
       logger.info("Sending employee with id "+colabId);
       Optional<Colab> _colab = ColabRepository.findById(colabId);
-      if (!_colab.isPresent()) {
+      if (_colab.isEmpty()) {
         try {
-        throw new NotFoundException(""+colabId+"Colaborador" + "id");
-      } catch (NotFoundException e){}
+        throw new NotFoundException("Mensagem de aviso: Valor não encontrado!!!");
+      } catch (NotFoundException exception){}
     }
       return _colab.get();
     }
