@@ -1,5 +1,5 @@
 # Your Fleet Management 
-Projeto Final de Programação Orientada a Objetos<p>
+Projeto Final da UC de Programação Orientada a Objetos<p>
 Projeto baseado numa aplicação feita por mim.
 Your Fleet Management - Esta aplicação pretende facilitar as empresas no controlo e gestão das suas viaturas.
 Será possivel controlar as entradas e saidas das suas viaturas, controlar os gastos das mesmas e a sua quilometragem diária.<p>
