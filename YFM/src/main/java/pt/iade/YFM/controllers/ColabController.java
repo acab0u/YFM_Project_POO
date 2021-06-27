@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import javassist.NotFoundException;
@@ -37,6 +39,14 @@ public class ColabController {
     }
       return _colab.get();
     }
+
+    @PostMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
+    public int saveAlbumTrack(@PathVariable int id, @RequestBody TrackFullView track) {
+        logger.info("Saving new track on album with id: "+id);
+        logger.info(track.toString());
+        return albumRepository.saveAlbumTrack(id,track);
+    }
+
     @GetMapping(path = "/empresa/{empresaId}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Iterable<Colab> getColabByEmpresa(@PathVariable("empresaId") Integer empresaId) {
       logger.info("Sending employees with company id "+ empresaId);
@@ -47,6 +57,5 @@ public class ColabController {
       public Iterable<Colab> getColabByUsernameAndPassword(@PathVariable("colab_username") String username,@PathVariable("colab_password") String password) {
         logger.info("Sending employee with username "+ username + " and password " + password);
         return ColabRepository.FindColabByUsernameAndPassword(username, password);
-      }        
-
+      }  
 }

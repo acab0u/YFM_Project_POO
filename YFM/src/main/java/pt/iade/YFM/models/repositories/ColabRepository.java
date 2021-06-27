@@ -14,4 +14,7 @@ public interface ColabRepository extends CrudRepository<Colab, Integer> {
     @Query(value=QueryFindColabByUsernameAndPassword,nativeQuery=true)
     Iterable<Colab> FindColabByUsernameAndPassword(@Param ("colab_username") String username, @Param ("colab_password") String password);
     Iterable<Colab> findByEmpresaId(Integer empresaId);
+
+    
 }
+
