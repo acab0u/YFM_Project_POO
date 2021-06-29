@@ -24,8 +24,8 @@ public class ColabController {
     private ColabRepository ColabRepository;
     @GetMapping(path ="", produces= MediaType.APPLICATION_JSON_VALUE)
     public Iterable<Colab> getColaboradores() {
-        logger.info("Sending all employees");
-        return ColabRepository.findAll();
+      logger.info("Sending all employees");
+      return ColabRepository.findAll();
     }
 
     @GetMapping(path = "/{colabId:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
@@ -40,22 +40,21 @@ public class ColabController {
       return _colab.get();
     }
 
-    @PostMapping(path = "/{id}/tracks", produces= MediaType.APPLICATION_JSON_VALUE)
-    public int saveAlbumTrack(@PathVariable int id, @RequestBody TrackFullView track) {
-        logger.info("Saving new track on album with id: "+id);
-        logger.info(track.toString());
-        return albumRepository.saveAlbumTrack(id,track);
-    }
-
     @GetMapping(path = "/empresa/{empresaId}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Iterable<Colab> getColabByEmpresa(@PathVariable("empresaId") Integer empresaId) {
-      logger.info("Sending employees with company id "+ empresaId);
-      return ColabRepository.findByEmpresaId(empresaId);
+        logger.info("Sending employees with company id "+ empresaId);
+        return ColabRepository.findByEmpresaId(empresaId);
     }  
 
     @GetMapping(path = "/login/{colab_username}/{colab_password}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Iterable<Colab> getColabByUsernameAndPassword(@PathVariable("colab_username") String username,@PathVariable("colab_password") String password) {
         logger.info("Sending employee with username "+ username + " and password " + password);
         return ColabRepository.FindColabByUsernameAndPassword(username, password);
-      }  
+    }  
+    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+      public Colab saveEmployee(@RequestBody Colab newColab) {
+        logger.info("Saving employee with id "+newColab.getId());
+        Colab colab = ColabRepository.save(newColab);
+      return colab;
+    }
 }
