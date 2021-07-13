@@ -20,14 +20,16 @@ public class Empresa {
     @Column(name="e_mail")
     private String mail;
     @Column(name="contacto")
-    private int contact;
+    private String contact;
     @Column(name="morada")
     private String address;
     @Column(name="localidade")
     private String local;
     @Column(name="nif")
-    private int nif;
+    private String nif;    
+
     public Empresa() {}
+    
     public int getId() {
         return id;
     }
@@ -37,7 +39,7 @@ public class Empresa {
     public String getMail() {
         return mail;
     }
-    public int getContact() {
+    public String getContact() {
         return contact;
     }
     public String getAddress() {
@@ -46,7 +48,8 @@ public class Empresa {
     public String getLocal() {
         return local;
     }
-    public int getNif() {
+    public String getNif() {
         return nif;
     }
+    
 }

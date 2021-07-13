@@ -3,7 +3,6 @@ window.onload = async function() {
     await showColab(colab);
     await showEmpresa(colab);
 }
-
 async function showColab(id) {
     try {
         let colab = await $.ajax({ 
@@ -37,9 +36,8 @@ async function showEmpresa(id) {
         document.getElementById("emp_e-mail").innerHTML = empresa.mail;
         document.getElementById("emp_morada").innerHTML = empresa.address;
         document.getElementById("emp_localidade").innerHTML = empresa.local;
-        
+        sessionStorage.setItem("empresaId",empresa.id);
     } catch(err) {
         console.log(err);
     }
 }
-

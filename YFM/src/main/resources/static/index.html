@@ -8,47 +8,110 @@
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="img_style.css">
+    <link rel="stylesheet" href="stylesheets/img_style.css">
 
 </head>
 
-<body style="background-color: rgb(172, 172, 165);">
+<body style="background-color: rgba(122, 118, 118, 0.534);">
     <style>
-        .round_button {
-            position:static;
-            background-color: #707279;
-            border:none;
-            color: white;
-            padding: 64px;
-            font-size: 22px;
-            margin:2px;
-            opacity: 0.7;
-            transition: 0.3s;
-            display:list-item;
-            text-decoration:wavy;
-            cursor: pointer;
-            border-radius: 50%;
-            }
+        .container {
+            position: relative;
+            width: 100%;
+            max-width:100%;
+        }
         
-            .round_button:hover {opacity: 1}
-</style>
+        .container img {
+            width: 100%;
+            height: auto;
+            margin-left: 28%;
+            margin-right: 50%;
+        }
+        
+        .container .btn {
+          position: absolute;
+          top: 80%;
+          left: 57%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: #555;
+          color: white;
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 50%;
+          text-align: center;
+        }
+        
+        .container .btn:hover {
+          background-color: black;
+        }
+        .container .txt {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          background-color: rgb(168, 165, 165);
+          color: rgb(46, 42, 42);
+          font-size: 16px;
+          text-align: center;
+        }
+        .container .lbl {
+          position: absolute;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          color: rgb(8, 8, 8);
+          font-size: 18px;
+          text-align: center;
+        }
+        .round_button {
+                position:sticky;
+                background-color: #707279;
+                color: white;
+                font-size: 17px;
+                margin: 10px;;
+                opacity: 0.7;
+                transition: 0.3s;
+                display: inline-block;
+                text-decoration:solid;
+                cursor: pointer;
+                border-radius: 50%;
+                }
+                .round_button:hover {opacity: 1}
+    </style>
 
     <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
+    <button style="left: 31%;" id="button_login" class="round_button"">Iniciar sessão</button>
+    <button style="left: 40.5%;" id="button_criar_colab" class="round_button" "  >Novo colaborador?</button>
+    <button style="left: 53%;" id="button_criar_empresa" class="round_button" "  >Nova empresa?</button>
+    <button style="left: 65%;" id="button_lista_colab" class="round_button" "  >lista colab</button>
     <h1 style="text-align: center; font-style:oblique; font-family: Georgia, 'Times New Roman', Times, serif;"> Bem Vindo ao Your Fleet Management! </h1>
-    <button id="button_lista_colab" class="round_button" style="margin-left: 40%;"  >Lista de Colaboradores</button>
+    <img src="images\fleet-safety.jpg" alt="Fleet_cars" >
+    <H4 class= "lbl" style="text-align: center;">Your Fleet Management tem como objetivo atenuar as dificuldades das empresas que possuem viaturas, no que diz respeito á gestão das mesmas.</H4>
+    <H4 style="text-align: center;">Neste tempo de rápida evolução, maximizar o tempo e lucro das suas viaturas será o verdadeiro objetivo a superar!</h4>
+    
     <script>
-        document.getElementById("button_lista_colab").onclick = function () {
-        return location.href = "lista_colabs.html";
+        document.getElementById("button_criar_colab").onclick = function () {
+        return location.href = "novo_colab.html";
     };
     </script>
-    <button id="button_login" class="round_button">Iniciar sessão</button>
+
+    <script>
+        document.getElementById("button_criar_empresa").onclick = function () {
+        return location.href = "nova_empresa.html";
+    };
+    </script>
+    
     <script>
         document.getElementById("button_login").onclick = function(){
             return location.href ="login.html";
         }
     </script>
-    <H4 style="text-align: center;">Your Fleet Management tem como objetivo atenuar as dificuldades das empresas que possuem viaturas, no que diz respeito á gestão das mesmas.</H4>
-    <H4 style="text-align: center;">Neste tempo de rápida evolução, maximizar o tempo e lucro das suas viaturas será o verdadeiro objetivo a superar!</h4>
+     <script>
+        document.getElementById("button_lista_colab").onclick = function(){
+            return location.href ="lista_colabs.html";
+        }
+    </script>
+   
     
 </body>
 

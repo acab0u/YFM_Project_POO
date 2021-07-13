@@ -14,7 +14,7 @@ public class Viatura {
     @Column(name="id_viatura")
     private int id;
     @Column(name="id_empresa")
-    private int emp_Id;
+    private String emp_Id;
     @Column(name="matricula")
     private String matricula;
     @Column(name="data_matricula")
@@ -24,16 +24,16 @@ public class Viatura {
     @Column(name="modelo_viatura")
     private String modelo;
     @Column(name="nr_apolice")
-    private int apolice;
+    private String apolice;
     @Column(name="data_apolice")
     private String data_apolice;
     @Column(name="quilometros_viatura")
-    private int quilometros;
+    private String quilometros;
 
     public int getId() {
         return id;
     }
-    public int getEmp_Id() {
+    public String getEmp_Id() {
         return emp_Id;
     }
     public String getMatricula() {
@@ -48,13 +48,13 @@ public class Viatura {
     public String getModelo() {
         return modelo;
     }
-    public int getApolice() {
+    public String getApolice() {
         return apolice;
     }
     public String getData_apolice() {
         return data_apolice;
     }
-    public int getQuilometros() {
+    public String getQuilometros() {
         return quilometros;
     }
 }

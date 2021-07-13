@@ -1,19 +1,19 @@
 package pt.iade.YFM.models;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 @Entity
 @Table(name="colaborador")
 public class Colab {
     @Id
     @GeneratedValue (strategy = GenerationType.IDENTITY)  
     @Column(name="id_colaborador")
-    private int id;
+    public int id;
     @Column(name="id_empresa")
     private int empresaId;
     @Column(name="nome_colaborador")
@@ -30,7 +30,10 @@ public class Colab {
     private String username;
     @Column(name="password")
     private String password;
+
+
     public Colab() {}
+    
     public int getId() {
         return id;
     }

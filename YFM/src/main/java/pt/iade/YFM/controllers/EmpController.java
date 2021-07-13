@@ -1,12 +1,16 @@
 package pt.iade.YFM.controllers;
 
 import java.util.Optional;
+
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,19 +32,27 @@ public class EmpController {
 
     @GetMapping(path = "/{empId:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
     public Empresa getEmpname(@PathVariable("empId") int empId) {
-    logger.info("Sending company with id "+empId);
-    Optional<Empresa> _emp = EmpRepository.findById(empId);
-    if (!_emp.isPresent()) {
-      try {
-        throw new NotFoundException(""+empId+"Empresa" + "id");
-    } catch (NotFoundException e){}
+      logger.info("Sending company with id "+empId);
+      Optional<Empresa> _emp = EmpRepository.findById(empId);
+      if (!_emp.isPresent()) {
+        try {
+          throw new NotFoundException(""+empId+"Empresa" + "id");
+      } catch (NotFoundException e){}
+        }
+      return _emp.get();
     }
-    return _emp.get();
+
+    @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
+      public Empresa saveEmpresa(@RequestBody Empresa newEmpresa) {
+        Empresa empresa = EmpRepository.save(newEmpresa);
+        logger.info("Saving company with id "+ empresa.getId() );
+      return empresa;
     }
     
     @GetMapping(path = "/colaborador/{colabId}", produces= MediaType.APPLICATION_JSON_VALUE)
       public Empresa getCompanyByColabId(@PathVariable("colabId") Integer colabId) {
         logger.info("Sending company of employee with id "+ colabId );
         return EmpRepository.FindCompanyId(colabId);
-    }     
+    }
+         
 }

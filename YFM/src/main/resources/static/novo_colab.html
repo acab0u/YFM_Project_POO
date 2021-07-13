@@ -1,15 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
-    <title>YFM - Iniciar Sessão</title>
+    <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="javascripts/login.js"></script>
+    <script src="javascripts/new_colab.js"></script>
+   
 </head>
-
 <body style="background-color: rgba(122, 118, 118, 0.534)">
     <style>
         .container {
@@ -79,32 +77,34 @@
                 .round_button:hover {opacity: 1}
     </style>
     <header>
-      <center>
-        <img style="position: relative; width: 400px; border-radius: 50%;" src="images\logo_YFM4.png" alt="YFM_logo">
-      </center>
-      </header>
-
-    <main> <center>
+        <center>
+            <img style="width: 400px; border-radius: 50%;" src="images\logo_YFM4.png" alt="YFM_logo"><br>
+            <br><br><button style="top: 32%;left: 42%;"id="button_home" class="round_button" >Voltar para página inicial</button>
+            <h1>Registo de novo utilizador</h1>
+        </center>
+    </header>
+    <main>
+        <center>
+            <h3 class="txt">Nome: <input style="text-align: center;" class="txt" type="text" id="name"></input> </h3>
+            <h3>Empresa: <select id="empresa"></select></h3>
+            <h3>E-mail:: <input type="text" id="mail"></input> </h3>
+            <h3>Contacto: <input type="text" id="contact"></input> </h3>
+            <h3>Morada: <input type="text" id="address"></input> </h3>
+            <h3>Localidade: <input type="text" id="local"></input> </h3>
+            <h3>Nome de Utilizador: <input  type="text" id="username"></input> </h3>
+            <h3>Palavra-passe: <input  type="password" id="password"></input> </h3>
+            <h3><input style="left: 42%;" type="button" class="round_button" value="Registar novo utilizador" onclick="addColab()"></h3>
+        </center>
             
+        
 
-    </center>
-      <div class="container"><h5 style="position: absolute;left: 25.5cm;top: 4cm;" >username: manuel_sampaio</h5><h5 style="position: absolute;left: 25.5cm;top: 5cm;" >username: manuelsampaio</h5>
-        <img class ="container"  src="images\driver-licence.png" alt="YFM_logo">
-        <label style="font-size:x-large ; top: 30%;left: 57%;" class="lbl" for="username"><strong>Por favor, inicie sessão</strong></label>
-        <label style="top: 40%;left: 57%;" class="lbl" for="username">Nome do Utilizador</label>
-        <input style="top: 45%;left: 57%;" class="txt" id="colab_username" type="text">
-        <label style="top: 55%;left: 57%;" class="lbl" >Palavra-Passe</label> 
-        <input style="top: 60%;left: 57%;" class="txt" id="colab_password" type="password">
-        <button style="top: 70%;left: 47%;" class="round_button" type="button" onclick="login()"> Iniciar Sessão</button>
-        <button style="top: 70%;left: 59%;" id="button_home" class="round_button" type="button" > página inicial</button>
+    </main>
+    
 
     <script style="text-align:center;" type="text/javascript">
             document.getElementById("button_home").onclick = function () {
                 location.href = "index.html";
             };
     </script>
-    </main>
 </body>
-
-        
 </html>

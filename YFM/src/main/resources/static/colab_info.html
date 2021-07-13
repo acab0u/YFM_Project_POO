@@ -7,16 +7,17 @@
     <link rel="shortcut icon" href="\images\logo_YFM6.jpg"> 
     <title>YFM</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="img_style.css">
-    <script src="colab_name.js"></script>
+    <link rel="stylesheet" href="stylesheets/img_style.css">
+    <script src="javascripts/colab_name.js"></script>
 </head>
 
-<body style="background-color: darkgrey;">
-    <img style="left: auto;" src="images\logo_YFM4.png" alt="YFM_logo">
-    <h1 style="text-align: center;  ">Bem-vindo/a <span id="colab_nome" ></span></h1>
+<body style="background-color: rgba(122, 118, 118, 0.534);">
+    <header>
+        <img style="position: sticky; width: 400px; border-radius: 50%;" src="images\logo_YFM4.png" alt="YFM_logo">
+    </header>
+    <h1 style="text-align: center;  ">Bem-vindo/a <u> <span id="colab_nome" ></span> </u></h1>
     <main>
-        <section>
-         <table>
+        <section style=" border-style:groove; display: inline-block;" >
             <h2>Dados Pessoais</h2> 
             <h4 style="text-align: left;">Nº de colaborador: <span id="id"></span> </h4> 
             <h4 style="text-align: left;">Nome: <span id="nome"></span> </h4>
@@ -25,7 +26,14 @@
             <h4 style="text-align: left;" >Localidade: <span id="localidade"></span> </h4>
             <h4 style="text-align: left;" >Contacto: <span id="contacto"></span> </h4>
         </section>
-        <section>
+
+        <section style="position: absolute; border-style: groove; display: inline-block;margin-left: 3.7cm;"> 
+            <button style="display:inline-block" id="button_Rsaida" class="round_button" >Registo de Saída</button>
+            <button style="display:inline-block" id="button_Rentrada" class="round_button" >Registo de Entrada</button>
+            <center><button style="display:block" id="button_Viaturas" class="round_button">Lista de viaturas da empresa</button></center>
+        </section>
+
+        <section style="border-style: groove;position: absolute; display: inline-block;margin-left: 22cm;">
             <h2>Dados da empresa</h2> 
             <h4 style="text-align: left;">Nº de empresa: <span id="emp_id"></span> </h4> 
             <h4 style="text-align: left;">Nome: <span id="emp_nome"></span> </h4>
@@ -34,9 +42,7 @@
             <h4 style="text-align: left;" >Localidade: <span id="emp_localidade"></span> </h4>
             <h4 style="text-align: left;" >Contacto: <span id="emp_contacto"></span> </h4>
         </section>
-         </table>
-            
-
+    
     </main>
     <style>
             .round_button {
@@ -58,14 +64,27 @@
                 .round_button:hover {opacity: 1}
     </style>
     
-    
-        <button id="button_Home" class="round_button" style="margin-left: 40%;"  >Lista de colaboradores</button>
+        <button id="button_Home" class="round_button" style="position: absolute; margin-left: 37%;margin-top:1%;"  >Lista de colaboradores</button>
         <script>
             document.getElementById("button_Home").onclick = function () {
             return location.href = "lista_colabs.html";
         };
         </script> 
-        
+        <script>
+            document.getElementById("button_Viaturas").onclick = function () {
+            return location.href = "lista_viaturas.html";
+        };
+        </script> 
+        <script>
+            document.getElementById("button_Rsaida").onclick = function () {
+            return location.href = "registo_saida.html";
+        };
+        </script> 
+        <script>
+            document.getElementById("button_Rentrada").onclick = function () {
+            return location.href = "registo_entrada.html";
+        };
+        </script> 
 </body>
 
 </html>

@@ -10,10 +10,10 @@ async function login() {
         if (colabs.length > 0) {
             sessionStorage.setItem("colabId",colabs[0].id);
             window.location = "colab_info.html";
+            document.getElementById("button_Rentrada"). disabled = true;
         } else {
             alert("nome de utilizador ou palavra-passe incorretos! Tente de novo.")
         }
-
     } catch(err) {
         console.log(err);
     }

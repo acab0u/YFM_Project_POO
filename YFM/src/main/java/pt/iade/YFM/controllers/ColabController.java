@@ -1,6 +1,8 @@
 package pt.iade.YFM.controllers;
 
 import java.util.Optional;
+
+
 import java.lang.String;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,8 +55,8 @@ public class ColabController {
     }  
     @PostMapping(path = "", produces= MediaType.APPLICATION_JSON_VALUE)
       public Colab saveEmployee(@RequestBody Colab newColab) {
-        logger.info("Saving employee with id "+newColab.getId());
         Colab colab = ColabRepository.save(newColab);
+        logger.info("Saving new employee with id "+ colab.getId() );
       return colab;
     }
 }
